@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bridgeclub-downloader"
+version = "0.1.0"
+description = "Bridge club result scraper and PBN exporter"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.3",
+  "lxml>=5.2.0",
+]
+
+[project.scripts]
+bridgeclub = "bridgeclub_downloader.cli:main"
+
+[tool.setuptools]
+packages = ["bridgeclub_downloader"]
